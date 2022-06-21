@@ -1,0 +1,488 @@
+/*fonts*/
+@font-face {
+  font-family: felix-titling;
+  src: url(fonts/FelixTitling.ttf)
+}
+
+@font-face{
+  font-family: coldiac;
+  src: url(fonts/ColdiacFree-Regular\ 400.otf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a{
+  text-decoration: none;
+  color: black;
+}
+
+p{
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  background: transparent linear-gradient(180deg, #FFFFFF 0%, #EBEDEE 100%) 0% 0% no-repeat padding-box;
+  opacity: 1;
+  height: 100vh;
+  width: 100%;
+  align-items: center;
+  scroll-behavior: none;
+  position: relative;
+  overflow: hidden;
+  justify-content: center;
+}
+
+/*FEATURED PRODUCTS*/
+header{
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  padding-top: 25px;
+  padding-bottom: 15px;
+  text-align: center;
+}
+
+.fp-title{
+  font-family: coldiac;
+  font-size: 45px;
+  letter-spacing: 2px;
+  cursor: default;
+  font-weight: 10px;
+  margin-top: 10px;
+  
+}
+/*FEATURED PRODUCTS*/
+
+/*IMAGE SLIDER*/
+main {
+  margin: 0;
+  padding: 0;
+  align-items: center;
+}
+
+.swiper {
+  width: 100%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  align-content: center;
+}
+
+.swiper-wrapper{
+  padding: 50px 0px 50px 0px;
+}
+
+.swiper .swiper-slide {
+  background-position: center;
+  background-size: cover;
+  border-radius: 5px;
+  width: 220px;
+  height: 320px;
+  position: relative;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 220px;
+  height: 320px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px #4d4c4c;
+  object-fit: cover;
+  pointer-events: none;  
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+
+}
+
+.img-hover{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  flex-direction: column;
+  font-family: 'Segoe UI';
+  color: #FFFFFF;
+  border-radius: 5px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.15s;
+}
+
+.img-hover > *{
+  transform: translateY(20px);
+  transition: transform 0.15s;
+}
+
+.img-hover:hover{
+  opacity:1;
+}
+
+.img-hover:hover > * {
+  transform: translateY(0px);
+}
+
+.img-name .img-description .image-price{
+  pointer-events: none;  
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+
+.img-name{
+  font-size: 35px;
+  letter-spacing: 3.5px;
+  padding: 5px;
+  font-weight: 50;
+}
+
+
+/*IMAGE SLIDER*/
+
+/*BOTTOM PART*/
+footer{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  bottom: 15px;
+  width: 100%;
+
+}
+
+footer p{
+  font: normal normal normal 18px/45px Segoe UI;
+  letter-spacing: 2.7px;
+  color: #000000;
+  opacity: 0.71;
+  text-align: center;
+  cursor: default;
+}
+
+footer a{
+  font: normal normal 400 15px/27px Segoe UI;
+  letter-spacing: 1.6px;
+  line-height:28px;
+  transition:transform 0.15s;
+}
+
+footer a:hover {
+  transform: scale(1.03);
+}
+
+footer a:active {
+  color: #000000;
+  opacity: 0.51;
+}
+
+.vertical { /*LINES IN BETWEEN FOOTER*/
+  border: 0.5px solid #707070;
+  opacity: 1;
+  height: 70px;
+  margin-top: 35px;
+}
+
+/*HOME, GALLERY, SHOP*/
+nav{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding:40px 0px 40px 0px;
+}
+.ribbon a{
+  font-family: 'Segoe UI';
+  font-size: 20px;
+  font-weight: 350;
+  padding: 7px 20px;
+  color: #000000;
+  letter-spacing: 3px;
+  position: relative;
+}
+
+.ribbon a::before{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 0%;
+  height: 2px;
+  background: #707070;
+  transition: all 250ms ease-in-out;
+}
+
+.ribbon a::after{
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0%;
+  height: 2px;
+  background: #707070;
+  transition: all 250ms ease-in-out;
+}
+.ribbon a:hover::before, .ribbon a:hover::after{
+  width: 100%;
+  left:0;
+}
+
+.ribbon a:active {
+  color: #000000;
+  opacity: 0.6;
+}
+/*HOME, GALLERY, SHOP*/
+
+/*FOOTER*/
+.ffooter{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-around;
+  bottom:10;
+}
+
+.ftr-ama{ /*FOOTER-ARAGO MARBLE ARTS*/
+  display: flex;
+  flex-direction: column;
+  padding:10px;
+  margin-right: 50px;
+  margin-left: 50px;
+}
+.ftr-help{ /*FOOTER-HELP*/
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  margin-right: 50px;
+  margin-left: 50px;
+}
+.ftr-help p {
+  font-size: 12px;
+}
+.ftr-message p {
+  font-size: 12px;
+}
+.ftr-ama p {
+  font-size: 12px;
+}
+.ftr-ama a{
+  font-weight: 50;
+  font-size: 10px;
+  line-height: 1.7;
+}
+.help-row{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.help-column{
+  display: flex;
+  flex-direction: column;
+  align-items: right;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.help-row a{
+  font-weight: 50;
+  font-size: 10px;
+  line-height: 1.7;
+}
+
+.ftr-message{ /*MESSAGE US!*/
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+  margin-right: 50px;
+  margin-left: 50px;
+  
+
+}
+.input-message{
+  border-radius: 4px;
+  border: 2px solid #707070;
+  padding:10px;
+}
+
+.input-message::placeholder{
+  text-align: center;
+  font-size: 10px;
+}
+
+.send-message{ /*SEND BUTTON*/
+  border: none;
+  background-color: black;
+  padding: 0px 20px;
+  margin-top: 2px;
+  box-shadow: 0 2px #999;
+  font: normal normal normal 10px/15px Segoe UI;
+  letter-spacing: 2px;
+  color: #FFFFFF;
+  opacity: 1;
+  cursor: pointer;
+  height: 20px;
+}
+
+.send-message:hover {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.24);
+}
+
+.send-message:active {
+  background-color: rgb(53, 50, 50);
+}
+/*FOOTER*/
+
+/*POPUP*/
+.btn{
+  border: none;
+  outline: none;
+  background: none;
+  cursor: pointer;
+  transition: transform 0.15s;
+}
+
+.btn:hover{
+  transform: scale(1.03);
+}
+
+.btn:active{
+  transform: scale(0.9);
+}
+
+.modal-btn{
+  background-color: transparent;
+  border: none;
+  font-size: 1.5rem;
+}
+
+.modal{
+  width: 500px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  transition: 200ms ease-in-out;
+  border: 1px solid black;
+  background-color: #fff;
+  z-index: 1000;
+  border-radius: 10px;
+}
+
+.modal.active{
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.header{
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #ccc;
+  align-items: center;
+  padding: 0.5rem 1rem;
+}
+
+.body{
+  padding: 1rem;
+}
+
+#overlay{
+  position: fixed;
+  display: none;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transition: 200ms ease-in-out;
+  background-color: rgba(0,0,0,.5);
+  pointer-events: none;
+  z-index: 999;
+}
+
+#overlay.active{
+  display: block;
+  pointer-events: all;
+}
+/*POPUP*/
+
+/*Media Query for devices*/
+
+/*Phone - 375px x 812 px*/
+@media (max-device-width: 375px){
+  .fp-title{
+    font-size: 17px;
+    letter-spacing: 1.7px;
+    justify-content: center;
+  }
+
+  .ribbon a{
+    font-size: 14px;
+    padding-left: 10px;
+    padding-right: 10px;
+    letter-spacing: 1.4px;
+  }
+}
+
+.ffooter{
+  
+}
+
+
+/*Tablet - 375px x 812 px*/
+@media (min-device-width: 375.02px) and (max-device-width: 834px){
+  .fp-title{
+    font-size: 45px;
+    letter-spacing: 0.45px;
+    justify-content: center;
+  }
+
+  .ribbon a{
+    font-size: 22px;
+    padding-left: 10px;
+    padding-right: 10px;
+    letter-spacing: 2.2px;
+  }
+}
+
+/*Media Query for the size of the web*/
+
+@media (max-width: 515px){
+  .fp-title{
+    font-size: 17px;
+    letter-spacing: 1.7px;
+    justify-content: center;
+  }
+
+  .ribbon a{
+    font-size: 14px;
+    padding-left: 10px;
+    padding-right: 10px;
+    letter-spacing: 1.4px;
+  }
+}
+
+@media (min-width: 515.02px) and (max-width: 902px){
+  .fp-title{
+    font-size: 45px;
+    letter-spacing: 0.45px;
+    justify-content: center;
+  }
+
+  .ribbon a{
+    font-size: 22px;
+    padding-left: 10px;
+    padding-right: 10px;
+    letter-spacing: 2.2px;
+  }
+}
+
+
+
